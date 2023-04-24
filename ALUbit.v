@@ -1,18 +1,21 @@
-module ALUbit( A, B, binvert, cin, less, signal, out, set, cout );
+`timescale 1ns/1ns
+module ALUbit( dataA, dataB, binvert, cin, less, Signal, dataOut, set, cout );
 
 
-    input A, B, binvert, cin, less;
-    input [5:0] signal;
-    output out, set, cout;
+
+    input dataA, dataB, binvert, cin, less;
+    input [5:0] Signal;
+    output dataOut, set, cout;
     
     wire cin;
     wire andOut, orOut, xorOut;
     
     
-    and(andOut, A, B);
-    or(orOut, A, B);
-    xor(xorOut, binvert, B);
-    one_bit_FA fa(set, cout, A, xorOut, cin);
-    MUX4_1 mux4to1(out, signal, andOut, orOut, set, less);
+    and(andOut, dataA, dataB);
+    or(orOut, dataA, dataB);
+    xor(xorOut, binvert, dataB);
+    ONEBIT_FA fa(.A(dataA), .B(xorOut), .cin(cin), .sum(set), .cout(cout));
+    
+    MUX4-1 mux( .sel(Signal), .andOut(andOut), .orOut(orOut), .FA(set), .SLT(less), .out(dataOut));
     
 endmodule
