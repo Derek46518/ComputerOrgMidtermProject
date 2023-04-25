@@ -7,44 +7,15 @@ input [5:0] Signal ;
 output [31:0] dataOut ;
 
 
-reg [31:0] temp ;
+reg [31:0] temp0, temp1, temp2, temp3, temp4 ;
 
 parameter SRL = 6'b000010;
 
-/*
-=====================================================
-下面為模擬範例，程式撰寫請遵照老師上課說明的方法來寫
-=====================================================
-*/
-always@( Signal or dataA or dataB or reset )
-begin
-	if ( reset )
-	begin
-		temp = 32'b0 ;
-	end
-/*
-reset訊號 如果是reset就做歸0
-*/
-	else
-	begin
-		case ( Signal )
-		SRL:
-		begin
-			temp = dataA >> dataB ;
-		end
-		default: temp = 32'b0 ;	
-	
-		endcase
-	end
-/*
-移位器運算
-*/
-end
-assign dataOut = temp ;
-/*
-=====================================================
-上面為模擬範例，程式撰寫請遵照老師上課說明的方法來寫
-=====================================================
-*/
+assign temp0 = (dataB[0]) ? {1'b0,dataA[31:1]} : dataA;
+assign temp1 = (dataB[1]) ? {2'b0,temp0[31:2]} : temp0;
+assign temp2 = (dataB[2]) ? {4'b0,temp1[31:4]} : temp1;
+assign temp3 = (dataB[3]) ? {8'b0,temp2[31:8]} : temp2;
+assign temp4 = (dataB[4]) ? {16'b0,temp3[31:16]} : temp3;
+assign dataOut = temp4;
 
 endmodule

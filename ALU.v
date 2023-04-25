@@ -26,7 +26,7 @@ parameter OR  = 6'b100101;
 parameter ADD = 6'b100000;
 parameter SUB = 6'b100010;
 parameter SLT = 6'b101010;
-// ALUbit( dataA, dataB, binvert, cin, less, Signal, dataOut, set, cout );
+
 assign cin = (Signal==SUB) ? 1:0;
 assign binvert = (Signal[1]==1'b1) ? 1:0;
 ALUbit alu0(.dataA(dataA[0]),.dataB(dataB[0]),.binvert(binvert),.cin(cin),.less(set),.Signal(Signal),.dataOut(dataOut[0]),.set(),cout(cout[0]));

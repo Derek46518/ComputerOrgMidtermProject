@@ -10,6 +10,7 @@ module  MUX4-1(sel,andOut,orOut,FA,SLT,out);
 input andOut,orOut,FA,SLT;
 input [5:0] sel;
 output out;
+/*
 if(sel[2]) begin
 if(sel[0]) assign dataOut = orOut;
 else assign dataOut = andOut;
@@ -18,4 +19,7 @@ else begin
 if(sel[3]) assign dataOut = SLT;
 else assign dataOut = FA;
 end
+*/
+assign dataOut = (sel[2]) ? ((sel[0]) ? orOut:andOut) : ((sel[3]) ? SLT:FA);
+
 endmodule
