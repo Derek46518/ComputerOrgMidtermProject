@@ -1,5 +1,5 @@
 `timescale 1ns/1ns
-module  MUX4-1(sel,andOut,orOut,FA,SLT,out);
+module  MUX4to1(sel,andOut,orOut,FA,SLT,out);
 
 //   Signal ( 6-bits)?
 //   AND  : 36 100100

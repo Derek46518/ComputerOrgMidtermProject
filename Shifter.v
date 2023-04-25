@@ -7,7 +7,7 @@ input [5:0] Signal ;
 output [31:0] dataOut ;
 
 
-reg [31:0] temp0, temp1, temp2, temp3, temp4 ;
+wire [31:0] temp0, temp1, temp2, temp3, temp4 ;
 
 parameter SRL = 6'b000010;
 

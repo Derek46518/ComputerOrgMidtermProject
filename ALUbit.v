@@ -14,8 +14,8 @@ module ALUbit( dataA, dataB, binvert, cin, less, Signal, dataOut, set, cout );
     and(andOut, dataA, dataB);
     or(orOut, dataA, dataB);
     xor(xorOut, binvert, dataB);
-    ONEBIT_FA fa(.A(dataA), .B(xorOut), .cin(cin), .sum(set), .cout(cout));
+    ONEBIT_FA fa(.A(dataA), .B(xorOut), .cin(cin), .sum(set), .out(cout));
     
-    MUX4-1 mux( .sel(Signal), .andOut(andOut), .orOut(orOut), .FA(set), .SLT(less), .out(dataOut));
+    MUX4to1 mux( .sel(Signal), .andOut(andOut), .orOut(orOut), .FA(set), .SLT(less), .out(dataOut));
     
 endmodule

@@ -30,7 +30,7 @@ parameter DIVU= 6'b011011;
 parameter MFHI= 6'b010000;
 parameter MFLO= 6'b010010;
 /*
-定義各種訊號
+嚙緩嚙緬嚙磊嚙諍訊嚙踝蕭
 */
 //============================
 wire [5:0]  SignaltoALU ;
@@ -40,19 +40,21 @@ wire [5:0]  SignaltoMUX ;
 wire [31:0] ALUOut, HiOut, LoOut, ShifterOut ;
 wire [31:0] dataOut ;
 wire [63:0] DivAns ;
+wire [63:0] MulAns;
 /*
-定義各種接線
+嚙緩嚙緬嚙磊嚙諍梧蕭嚙線
 */
 //============================
 
 ALUControl ALUControl( .clk(clk), .Signal(Signal), .SignaltoALU(SignaltoALU), .SignaltoSHT(SignaltoSHT), .SignaltoDIV(SignaltoDIV), .SignaltoMUX(SignaltoMUX) );
 ALU ALU( .dataA(dataA), .dataB(dataB), .Signal(SignaltoALU), .dataOut(ALUOut), .reset(reset) );
-Divider Divider( .clk(clk), .dataA(dataA), .dataB(dataB), .Signal(SignaltoDIV), .dataOut(DivAns), .reset(reset) );
+// Divider Divider( .clk(clk), .dataA(dataA), .dataB(dataB), .Signal(SignaltoDIV), .dataOut(DivAns), .reset(reset) );
+Multiplier mul( .clk(clk), .dataA(dataA), .dataB(dataB), .Signal(SignaltoDIV), .dataOut(MulAns), .reset(reset) );
 Shifter Shifter( .dataA(dataA), .dataB(dataB), .Signal(SignaltoSHT), .dataOut(ShifterOut), .reset(reset) );
 HiLo HiLo( .clk(clk), .DivAns(DivAns), .HiOut(HiOut), .LoOut(LoOut), .reset(reset) );
 MUX MUX( .ALUOut(ALUOut), .HiOut(HiOut), .LoOut(LoOut), .Shifter(ShifterOut), .Signal(SignaltoMUX), .dataOut(dataOut) );
 /*
-建立各種module
+嚙諍立各嚙踝蕭module
 */
 assign Output = dataOut ;
 

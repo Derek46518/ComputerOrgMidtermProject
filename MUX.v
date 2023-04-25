@@ -18,7 +18,7 @@ parameter SLT = 6'b101010;
 
 parameter SRL = 6'b000010;
 
-parameter MULTU=6'n011001
+parameter MULTU=6'b011001;
 parameter DIVU= 6'b011011;
 parameter MFHI= 6'b010000;
 parameter MFLO= 6'b010010;
