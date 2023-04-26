@@ -10,7 +10,7 @@ module  MUX4to1(sel,andOut,orOut,FA,SLT,out);
 input andOut,orOut,FA,SLT;
 input [5:0] sel;
 output out;
-
-assign dataOut = (sel[2]) ? ((sel[0]) ? orOut:andOut) : ((sel[3]) ? SLT:FA);
-
+wire temp;
+assign out = (sel[2]) ? ((sel[0]) ? orOut:andOut) : ((sel[3]) ? SLT:FA);
+// assign out = temp;
 endmodule

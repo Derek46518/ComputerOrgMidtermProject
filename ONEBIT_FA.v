@@ -8,5 +8,5 @@ xor(sum,cin,wire1);
 or(wire2,A,B);
 and(wire3,wire2,cin);
 and(wire4,A,B);
-or(cout,wire3,wire4);
+or(out,wire3,wire4);
 endmodule
