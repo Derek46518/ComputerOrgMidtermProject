@@ -3,23 +3,10 @@ module tb_ALU();
 	reg clk, rst;
 	reg[5:0] ctrl;
 	reg[31:0] inputA, inputB, ans;
-	wire[31:0] out = 32'd50;
+	wire[31:0] out;
 	integer fp_r, fp_r_ans, eof;
 	
-	parameter AND = 6'b100100;
-	parameter OR  = 6'b100101;
-	parameter ADD = 6'b100000;
-	parameter SUB = 6'b100010;
-	parameter SLT = 6'b101010;
-
-	parameter SRL = 6'b000010;
-
-	parameter DIVU= 6'b011011;
-	parameter MULTU= 6'b011001;
-	parameter MFHI= 6'b010000;
-	parameter MFLO= 6'b010010;
-
-	
+	// 產生時脈，週期：10ns
 	initial begin
 		clk = 1'b1;
 		forever #5 clk = ~clk;
@@ -30,11 +17,23 @@ module tb_ALU();
 		rst = 1'b1;
 		#10;
 		rst = 1'b0;
-		
+		/*
+			讀取輸入指令，檔名"input.txt"可自行修改
+			每一行為一筆輸入
+			格式為：控制訊號  InputA  InputB
+		*/
 		fp_r = $fopen( "input.txt", "r" );
-		
+		/*
+			讀取答案，檔名"ans.txt"可自行修改
+			每一行為一筆正確答案
+		*/
 		fp_r_ans = $fopen( "ans.txt", "r" );
-		
+		/*
+			自此開始模擬ALU並比對輸出結果
+			如結果正確，將輸出："Correct"
+			不正確將輸出執行結果與正確答案
+			以上輸出的第一個數字為cycle number
+		*/
 		$display( "Start\n" );
 		eof = $fscanf(fp_r_ans, "%d", ans);
 		while( eof != -1 ) begin
@@ -47,11 +46,14 @@ module tb_ALU();
 			else if ( ctrl == 6'd42 ) $write( "SLT(%d) ", ctrl );
 			else if ( ctrl == 6'd2 ) $write( "SRL(%d) ", ctrl );
 			else if ( ctrl == 6'd27 ) $write( "DIVU(%d) ", ctrl );
-			
 			$display( "%d%d", inputA, inputB  );
 			if ( ctrl == 32'd27 ) begin
 				#330;
 				$display( "%d: Div End\n", $time/10 );
+				/*
+					除法器執行結束後，答案存至Hi-Lo暫存器
+					以下自動產生MFHI, MFLO指令檢查除法運算結果
+				*/
 				#10;
 				#10;
 				
@@ -71,13 +73,8 @@ module tb_ALU();
 				else
 					$display( "%d: Wrong Answer: Your answer is:%d,\n                                             Correct answer is:%d\n", $time/10, out, ans );
 			end
-			
-			
-			
 			else begin
-
 				#10;
-				
 				if ( ans == out )
 					$display( "%d: Correct: Your answer is:%d,\n                                 Correct answer is:%d\n", $time/10, out, ans );
 				else

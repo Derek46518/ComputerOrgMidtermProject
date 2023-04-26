@@ -1,13 +1,11 @@
 `timescale 1ns/1ns
-module ALUControl( clk, Signal, SignaltoALU, SignaltoSHT, SignaltoMUL, SignaltoDIV, SignaltoMUX );
+module ALUControl( clk, Signal, SignaltoALU, SignaltoSHT, SignaltoDIV, SignaltoMUX );
 input clk ;
 input [5:0] Signal ;
 output [5:0] SignaltoALU ;
 output [5:0] SignaltoSHT ;
 output [5:0] SignaltoDIV ;
 output [5:0] SignaltoMUX ;
-output [5:0] SignaltoMUL;
-output [5:0] SignaltoDIV;
 
 //   Signal ( 6-bits)?
 //   AND  : 36
@@ -34,22 +32,30 @@ parameter SRL = 6'b000010;
 parameter DIVU= 6'b011011;
 parameter MFHI= 6'b010000;
 parameter MFLO= 6'b010010;
-parameter MULTU=6'b011001;
+/*
+定義各種訊號
+*/
+
+/*
+=====================================================
+下面為模擬範例，程式撰寫請遵照老師上課說明的方法來寫
+=====================================================
+*/
 always@( Signal )
 begin
-  if ( Signal == MULTU )
+  if ( Signal == DIVU )
   begin
     counter = 0 ;
   end
 /*
-嚙緘嚙瘦嚙確嚙踝蕭嚙踝蕭嚙豌佗蕭嚙踝蕭嚙糊 嚙瞇嚙踝蕭counter嚙糊0
+如果訊號改變成除法 就把counter歸0
 */
 end
 
 always@( posedge clk )
 begin
   temp = Signal ;
-  if ( Signal == MULTU )
+  if ( Signal == DIVU )
   begin
     counter = counter + 1 ;
     if ( counter == 32 )
@@ -59,7 +65,7 @@ begin
     end
   end
 /*
-嚙踝蕭32嚙踝蕭clk嚙瞎嚙踝蕭}嚙踝蕭HiLo嚙褓存嚙踝蕭嚙踝蕭嚙踝蕭嚙糊嚙踝蕭嚙踝蕭�進嚙篁
+數32個clk然後開啟HiLo暫存器給除法器放值進去
 */
 end
 
