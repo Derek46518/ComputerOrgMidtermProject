@@ -48,14 +48,9 @@ module tb_ALU();
 			else if ( ctrl == 6'd25 ) $write( "MULTU(%d) ", ctrl );
 			$display( "%d%d", inputA, inputB  );
 			if ( ctrl == 32'd25 ) begin
-				#330;
+				#320;
 				$display( "%d: Mul End\n", $time/10 );
-				/*
-					���k�����浲����A���צs��Hi-Lo�Ȧs��
-					�H�U�۰ʲ���MFHI, MFLO���O�ˬd���k�B�⵲�G
-				*/
-				#10;
-				#10;
+				
 				
 				$display( "                   Move Hi" );
 				ctrl = 6'd16;
