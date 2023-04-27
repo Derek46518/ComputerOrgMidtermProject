@@ -9,13 +9,14 @@ reg[31:0] B;
 parameter MULTU=6'b011001;
 parameter OUT = 6'b111111;
 
-always@(posedge clk or reset)
+
+always@(posedge clk or reset )
     begin
         if (reset) 
         begin
-            assign Product = 64'b0;
-            assign temp = {32'b0,dataA[31:0]};
-            assign B={dataB[31:0]};
+            Product <= 64'b0;
+            temp <= {32'b0,dataA};
+            B <= dataB;
         end
     
         else
@@ -23,22 +24,24 @@ always@(posedge clk or reset)
         case ( Signal )
   		MULTU:
 		begin
-            if(B[0]) begin
-                assign Product = temp+Product;
+            if(B[0]==1'b1) begin
+                Product = temp + Product;
             end
 
-            assign B = B >> 1;
-            assign temp = temp << 1;
+            B <= B >> 1;
+            temp <= temp << 1;
 		end
+        
   		OUT:
-		begin
-			Product <= 64'b0;
-            temp <= {32'b0,dataA[31:0]};
-            B <={dataB[31:0]};
+        begin
+            temp  <= dataA;
+            B <= dataB;
+            Product <= 64'b0;
         end
 		
 		endcase
         end
+        
         
     end
 assign dataOut = Product;
