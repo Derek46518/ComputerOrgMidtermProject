@@ -2,7 +2,8 @@ library verilog;
 use verilog.vl_types.all;
 entity Multiplier is
     generic(
-        MULTU           : vl_logic_vector(0 to 5) := (Hi0, Hi1, Hi1, Hi0, Hi0, Hi1)
+        MULTU           : vl_logic_vector(0 to 5) := (Hi0, Hi1, Hi1, Hi0, Hi0, Hi1);
+        \OUT\           : vl_logic_vector(0 to 5) := (Hi1, Hi1, Hi1, Hi1, Hi1, Hi1)
     );
     port(
         clk             : in     vl_logic;
@@ -14,4 +15,5 @@ entity Multiplier is
     );
     attribute mti_svvh_generic_type : integer;
     attribute mti_svvh_generic_type of MULTU : constant is 1;
+    attribute mti_svvh_generic_type of \OUT\ : constant is 1;
 end Multiplier;

@@ -16,6 +16,6 @@ assign temp1 = (dataB[1]) ? {2'b0,temp0[31:2]} : temp0;
 assign temp2 = (dataB[2]) ? {4'b0,temp1[31:4]} : temp1;
 assign temp3 = (dataB[3]) ? {8'b0,temp2[31:8]} : temp2;
 assign temp4 = (dataB[4]) ? {16'b0,temp3[31:16]} : temp3;
-assign dataOut = temp4;
+assign dataOut = (Signal == SRL ) ? temp4 : dataOut;
 
 endmodule

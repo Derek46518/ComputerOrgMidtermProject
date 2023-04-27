@@ -11,6 +11,6 @@ input andOut,orOut,FA,SLT;
 input [5:0] sel;
 output out;
 wire temp;
-assign out = (sel[2]) ? ((sel[0]) ? orOut:andOut) : ((sel[3]) ? SLT:FA);
-// assign out = temp;
+assign temp = (sel[2]) ? ((sel[0]) ? orOut:andOut) : ((sel[3]) ? SLT:FA);
+assign out = temp;
 endmodule

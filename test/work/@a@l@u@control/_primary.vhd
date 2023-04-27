@@ -8,6 +8,7 @@ entity ALUControl is
         SUB             : vl_logic_vector(0 to 5) := (Hi1, Hi0, Hi0, Hi0, Hi1, Hi0);
         SLT             : vl_logic_vector(0 to 5) := (Hi1, Hi0, Hi1, Hi0, Hi1, Hi0);
         \SRL\           : vl_logic_vector(0 to 5) := (Hi0, Hi0, Hi0, Hi0, Hi1, Hi0);
+        MULTU           : vl_logic_vector(0 to 5) := (Hi0, Hi1, Hi1, Hi0, Hi0, Hi1);
         DIVU            : vl_logic_vector(0 to 5) := (Hi0, Hi1, Hi1, Hi0, Hi1, Hi1);
         MFHI            : vl_logic_vector(0 to 5) := (Hi0, Hi1, Hi0, Hi0, Hi0, Hi0);
         MFLO            : vl_logic_vector(0 to 5) := (Hi0, Hi1, Hi0, Hi0, Hi1, Hi0)
@@ -27,6 +28,7 @@ entity ALUControl is
     attribute mti_svvh_generic_type of SUB : constant is 1;
     attribute mti_svvh_generic_type of SLT : constant is 1;
     attribute mti_svvh_generic_type of \SRL\ : constant is 1;
+    attribute mti_svvh_generic_type of MULTU : constant is 1;
     attribute mti_svvh_generic_type of DIVU : constant is 1;
     attribute mti_svvh_generic_type of MFHI : constant is 1;
     attribute mti_svvh_generic_type of MFLO : constant is 1;

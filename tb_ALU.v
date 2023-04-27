@@ -3,23 +3,10 @@ module tb_ALU();
 	reg clk, rst;
 	reg[5:0] ctrl;
 	reg[31:0] inputA, inputB, ans;
-	wire[31:0] out = 32'd50;
+	wire[31:0] out;
 	integer fp_r, fp_r_ans, eof;
 	
-	parameter AND = 6'b100100;
-	parameter OR  = 6'b100101;
-	parameter ADD = 6'b100000;
-	parameter SUB = 6'b100010;
-	parameter SLT = 6'b101010;
-
-	parameter SRL = 6'b000010;
-
-	parameter DIVU= 6'b011011;
-	parameter MULTU= 6'b011001;
-	parameter MFHI= 6'b010000;
-	parameter MFLO= 6'b010010;
-
-	
+	// ���ͮɯߡA�g���G10ns
 	initial begin
 		clk = 1'b1;
 		forever #5 clk = ~clk;
@@ -30,11 +17,23 @@ module tb_ALU();
 		rst = 1'b1;
 		#10;
 		rst = 1'b0;
-		
+		/*
+			Ū����J���O�A�ɦW"input.txt"�i�ۦ�ק�
+			�C�@�欰�@����J
+			�榡���G����T��  InputA  InputB
+		*/
 		fp_r = $fopen( "input.txt", "r" );
-		
+		/*
+			Ū�����סA�ɦW"ans.txt"�i�ۦ�ק�
+			�C�@�欰�@�����T����
+		*/
 		fp_r_ans = $fopen( "ans.txt", "r" );
-		
+		/*
+			�ۦ��}�l����ALU�ä���X���G
+			�p���G���T�A�N��X�G"Correct"
+			�����T�N��X���浲�G�P���T����
+			�H�W��X���Ĥ@�ӼƦr��cycle number
+		*/
 		$display( "Start\n" );
 		eof = $fscanf(fp_r_ans, "%d", ans);
 		while( eof != -1 ) begin
@@ -46,12 +45,15 @@ module tb_ALU();
 			else if ( ctrl == 6'd34 ) $write( "SUB(%d) ", ctrl );
 			else if ( ctrl == 6'd42 ) $write( "SLT(%d) ", ctrl );
 			else if ( ctrl == 6'd2 ) $write( "SRL(%d) ", ctrl );
-			else if ( ctrl == 6'd27 ) $write( "DIVU(%d) ", ctrl );
-			
+			else if ( ctrl == 6'd25 ) $write( "MULTU(%d) ", ctrl );
 			$display( "%d%d", inputA, inputB  );
-			if ( ctrl == 32'd27 ) begin
+			if ( ctrl == 32'd25 ) begin
 				#330;
-				$display( "%d: Div End\n", $time/10 );
+				$display( "%d: Mul End\n", $time/10 );
+				/*
+					���k�����浲����A���צs��Hi-Lo�Ȧs��
+					�H�U�۰ʲ���MFHI, MFLO���O�ˬd���k�B�⵲�G
+				*/
 				#10;
 				#10;
 				
@@ -71,13 +73,8 @@ module tb_ALU();
 				else
 					$display( "%d: Wrong Answer: Your answer is:%d,\n                                             Correct answer is:%d\n", $time/10, out, ans );
 			end
-			
-			
-			
 			else begin
-
 				#10;
-				
 				if ( ans == out )
 					$display( "%d: Correct: Your answer is:%d,\n                                 Correct answer is:%d\n", $time/10, out, ans );
 				else

@@ -15,6 +15,7 @@ output [31:0] Output ;
 //   SRL  : 2
 //   SLT  : 42
 //   DIVU : 27
+//   MULTU : 25
 
 wire [31:0] temp ;
 
@@ -27,30 +28,26 @@ parameter SLT = 6'b101010;
 parameter SRL = 6'b000010;
 
 parameter DIVU= 6'b011011;
-parameter MULTU= 6'b011001;
+parameter MULTU = 6'b011001;
 parameter MFHI= 6'b010000;
 parameter MFLO= 6'b010010;
-/*
-�w�q�U�ذT��
-*/
-//============================
+
 wire [5:0]  SignaltoALU ;
 wire [5:0]  SignaltoSHT ;
 wire [5:0]  SignaltoDIV ;
 wire [5:0]  SignaltoMUX ;
+wire [5:0]  SignaltoMUL;
 wire [31:0] ALUOut, HiOut, LoOut, ShifterOut ;
 wire [31:0] dataOut ;
-wire [63:0] DivAns ;
-wire [63:0] MulAns;
+wire [63:0] MulAns ;
 /*
 �w�q�U�ر��u
 */
 //============================
 
-ALUControl ALUControl( .clk(clk), .Signal(Signal), .SignaltoALU(SignaltoALU), .SignaltoSHT(SignaltoSHT), .SignaltoMUL(SignaltoMUL), .SignaltoDIV(SignaltoDIV), .SignaltoMUX(SignaltoMUX) );
+ALUControl ALUControl( .clk(clk), .Signal(Signal), .SignaltoALU(SignaltoALU), .SignaltoSHT(SignaltoSHT), .SignaltoDIV(SignaltoMUL), .SignaltoMUX(SignaltoMUX) );
 ALU ALU( .dataA(dataA), .dataB(dataB), .Signal(SignaltoALU), .dataOut(ALUOut), .reset(reset) );
-Divider Divider( .clk(clk), .dataA(dataA), .dataB(dataB), .Signal(SignaltoDIV), .dataOut(DivAns), .reset(reset) );
-Multiplier mul( .clk(clk), .dataA(dataA), .dataB(dataB), .Signal(SignaltoDIV), .dataOut(MulAns), .reset(reset) );
+Multiplier Multiplier( .clk(clk), .dataA(dataA), .dataB(dataB), .Signal(SignaltoMUL), .dataOut(MulAns), .reset(reset) );
 Shifter Shifter( .dataA(dataA), .dataB(dataB), .Signal(SignaltoSHT), .dataOut(ShifterOut), .reset(reset) );
 HiLo HiLo( .clk(clk), .DivAns(MulAns), .HiOut(HiOut), .LoOut(LoOut), .reset(reset) );
 MUX MUX( .ALUOut(ALUOut), .HiOut(HiOut), .LoOut(LoOut), .Shifter(ShifterOut), .Signal(SignaltoMUX), .dataOut(dataOut) );
