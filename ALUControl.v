@@ -58,13 +58,15 @@ begin
   temp = Signal ;
   if ( Signal == MULTU )
   begin
-    if(counter == 1) res <= 0;
     
+    if (counter==1) res <=0;
     counter = counter + 1 ;
+    
     if ( counter == 32 )
     begin
       temp = 6'b111111 ; // Open HiLo reg for Div
       counter = 0 ;
+      
     end
   end
 /*

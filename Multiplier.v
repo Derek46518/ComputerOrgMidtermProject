@@ -41,9 +41,7 @@ always@(posedge clk or reset )
         
   		OUT:
         begin
-            temp  <= dataA;
-            B <= dataB;
-            Product <= 64'b0;
+            
         end
 		
 		endcase

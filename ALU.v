@@ -23,7 +23,7 @@ reg [31:0] temp ;
 
 
 
-assign cin = (Signal==SUB) ? 1:0;
+assign cin = (Signal[1]) ? 1:0;
 assign binvert = (Signal[1]) ? 1:0;
 ALUbit alu0(.dataA(dataA[0]), .dataB(dataB[0]), .binvert(binvert), .cin(cin), .less(set), .Signal(Signal), .dataOut(dataOut[0]), .set(), .cout(cout[0]));
 ALUbit alu1(.dataA(dataA[1]), .dataB(dataB[1]), .binvert(binvert), .cin(cout[0]), .less(1'b0), .Signal(Signal), .dataOut(dataOut[1]), .set(), .cout(cout[1]));
