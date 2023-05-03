@@ -32,15 +32,7 @@ parameter MULTU = 6'b011001;
 parameter DIVU= 6'b011011;
 parameter MFHI= 6'b010000;
 parameter MFLO= 6'b010010;
-/*
-�w�q�U�ذT��
-*/
 
-/*
-=====================================================
-�U���������d�ҡA�{�����g�п��ӦѮv�W�һ�������k�Ӽg
-=====================================================
-*/
 always@( Signal )
 begin
   if ( Signal == MULTU )
@@ -48,9 +40,7 @@ begin
     counter = 0 ;
     res <= 1;
   end
-/*
-�p�G�T�����ܦ����k �N��counter�k0
-*/
+
 end
 
 always@( posedge clk )
@@ -69,9 +59,7 @@ begin
       
     end
   end
-/*
-��32��clk�M��}��HiLo�Ȧs�������k����ȶi�h
-*/
+
 end
 
 

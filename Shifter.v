@@ -10,15 +10,7 @@ output [31:0] dataOut ;
 wire [31:0] temp0, temp1, temp2, temp3, temp4 ;
 
 parameter SRL = 6'b000010;
-/*
-assign temp0 = (dataB[0]) ? {1'b0,dataA[31:1]} : dataA;
-assign temp1 = (dataB[1]) ? {2'b0,temp0[31:2]} : temp0;
-assign temp2 = (dataB[2]) ? {4'b0,temp1[31:4]} : temp1;
-assign temp3 = (dataB[3]) ? {8'b0,temp2[31:8]} : temp2;
-assign temp4 = (dataB[4]) ? {16'b0,temp3[31:16]} : temp3;
-assign dataOut = (Signal == SRL ) ? temp4 : dataOut;
-*/
-//module MUX2_1(in0,in1,sel,out)
+
 MUX2_1 m0(dataA[0],dataA[1],dataB[0],temp0[0]);
 MUX2_1 m1(dataA[1],dataA[2],dataB[0],temp0[1]);
 MUX2_1 m2(dataA[2],dataA[3],dataB[0],temp0[2]);
