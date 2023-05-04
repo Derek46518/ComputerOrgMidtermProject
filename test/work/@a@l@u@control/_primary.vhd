@@ -19,8 +19,7 @@ entity ALUControl is
         SignaltoALU     : out    vl_logic_vector(5 downto 0);
         SignaltoSHT     : out    vl_logic_vector(5 downto 0);
         SignaltoDIV     : out    vl_logic_vector(5 downto 0);
-        SignaltoMUX     : out    vl_logic_vector(5 downto 0);
-        mulRes          : out    vl_logic
+        SignaltoMUX     : out    vl_logic_vector(5 downto 0)
     );
     attribute mti_svvh_generic_type : integer;
     attribute mti_svvh_generic_type of \AND\ : constant is 1;

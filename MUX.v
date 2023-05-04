@@ -15,12 +15,8 @@ parameter SLT = 6'b101010; //ALU
 parameter SRL = 6'b000010; // SHIFTER
 parameter MFHI = 6'b010000; // HiOut
 parameter MFLO = 6'b010010; 
-assign dataOut = (Signal[5]) ?  ALUOut : (Signal[4]) ? (Signal[1]) ? LoOut : HiOut : Shifter;
+assign dataOut = (Signal[5]) ?  ALUOut : ((Signal[4]) ? (Signal[1]) ? LoOut : HiOut : Shifter);
 
-/*
-=====================================================
-上面為模擬範例，程式撰寫請遵照老師上課說明的方法來寫
-=====================================================
-*/
+
 
 endmodule

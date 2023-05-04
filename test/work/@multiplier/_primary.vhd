@@ -11,8 +11,7 @@ entity Multiplier is
         dataB           : in     vl_logic_vector(31 downto 0);
         \Signal\        : in     vl_logic_vector(5 downto 0);
         dataOut         : out    vl_logic_vector(63 downto 0);
-        reset           : in     vl_logic;
-        mulRes          : in     vl_logic
+        reset           : in     vl_logic
     );
     attribute mti_svvh_generic_type : integer;
     attribute mti_svvh_generic_type of MULTU : constant is 1;
