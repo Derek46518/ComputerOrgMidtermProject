@@ -26,7 +26,7 @@ always@(posedge clk or reset )
   		MULTU:
 		begin
             if(B[0]==1'b1) begin
-                Product = temp + Product;
+                Product <= temp + Product;
             end
 
             B <= B >> 1;

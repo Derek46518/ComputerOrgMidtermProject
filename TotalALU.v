@@ -40,10 +40,7 @@ wire [5:0]  SignaltoMUL;
 wire [31:0] ALUOut, HiOut, LoOut, ShifterOut ;
 wire [31:0] dataOut ;
 wire [63:0] MulAns ;
-/*
-�w�q�U�ر��u
-*/
-//============================
+
 
 ALUControl ALUControl( .clk(clk), .Signal(Signal), .SignaltoALU(SignaltoALU), .SignaltoSHT(SignaltoSHT), .SignaltoDIV(SignaltoMUL), .SignaltoMUX(SignaltoMUX) );
 ALU ALU( .dataA(dataA), .dataB(dataB), .Signal(SignaltoALU), .dataOut(ALUOut), .reset(reset) );
@@ -51,9 +48,7 @@ Multiplier Multiplier( .clk(clk), .dataA(dataA), .dataB(dataB), .Signal(Signalto
 Shifter Shifter( .dataA(dataA), .dataB(dataB), .Signal(SignaltoSHT), .dataOut(ShifterOut), .reset(reset) );
 HiLo HiLo( .clk(clk), .DivAns(MulAns), .HiOut(HiOut), .LoOut(LoOut), .reset(reset) );
 MUX MUX( .ALUOut(ALUOut), .HiOut(HiOut), .LoOut(LoOut), .Shifter(ShifterOut), .Signal(SignaltoMUX), .dataOut(dataOut) );
-/*
-�إߦU��module
-*/
+
 assign Output = dataOut ;
 
 
