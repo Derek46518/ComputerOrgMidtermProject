@@ -10,12 +10,7 @@ reg[31:0] B;
 parameter MULTU=6'b011001;
 parameter OUT = 6'b111111;
 
-always@(posedge mulRes)
-begin
-Product <= 64'b0;
-temp <= {32'b0,dataA};
-B <= dataB;
-end
+
 
 always@(posedge clk or reset )
     begin
