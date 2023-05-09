@@ -43,6 +43,7 @@ MUX2_1 m28(dataA[28],dataA[29],dataB[0],temp0[28]);
 MUX2_1 m29(dataA[29],dataA[30],dataB[0],temp0[29]);
 MUX2_1 m30(dataA[30],dataA[31],dataB[0],temp0[30]);
 MUX2_1 m31(dataA[31],1'b0,dataB[0],temp0[31]);
+MUX2_1 m31(dataA[31],1'b0,dataB[0],temp0[31]);
 
 
 MUX2_1 mm0(temp0[0],temp0[2],dataB[1],temp1[0]);
@@ -75,6 +76,8 @@ MUX2_1 mm26(temp0[26],temp0[28],dataB[1],temp1[26]);
 MUX2_1 mm27(temp0[27],temp0[29],dataB[1],temp1[27]);
 MUX2_1 mm28(temp0[28],temp0[30],dataB[1],temp1[28]);
 MUX2_1 mm29(temp0[29],temp0[31],dataB[1],temp1[29]);
+MUX2_1 mm30(temp0[30],1'b0,dataB[1],temp1[30]);
+MUX2_1 mm31(temp0[31],1'b0,dataB[1],temp1[31]);
 MUX2_1 mm30(temp0[30],1'b0,dataB[1],temp1[30]);
 MUX2_1 mm31(temp0[31],1'b0,dataB[1],temp1[31]);
 
@@ -110,6 +113,10 @@ MUX2_1 mmm28(temp1[28],1'b0,dataB[2],temp2[28]);
 MUX2_1 mmm29(temp1[29],1'b0,dataB[2],temp2[29]);
 MUX2_1 mmm30(temp1[30],1'b0,dataB[2],temp2[30]);
 MUX2_1 mmm31(temp1[31],1'b0,dataB[2],temp2[31]);
+MUX2_1 mmm28(temp1[28],1'b0,dataB[2],temp2[28]);
+MUX2_1 mmm29(temp1[29],1'b0,dataB[2],temp2[29]);
+MUX2_1 mmm30(temp1[30],1'b0,dataB[2],temp2[30]);
+MUX2_1 mmm31(temp1[31],1'b0,dataB[2],temp2[31]);
 
 MUX2_1 mmmm0(temp2[0],temp2[8],dataB[3],temp3[0]);
 MUX2_1 mmmm1(temp2[1],temp2[9],dataB[3],temp3[1]);
@@ -135,6 +142,14 @@ MUX2_1 mmmm20(temp2[20],temp2[28],dataB[3],temp3[20]);
 MUX2_1 mmmm21(temp2[21],temp2[29],dataB[3],temp3[21]);
 MUX2_1 mmmm22(temp2[22],temp2[30],dataB[3],temp3[22]);
 MUX2_1 mmmm23(temp2[23],temp2[31],dataB[3],temp3[23]);
+MUX2_1 mmmm24(temp2[24],1'b0,dataB[3],temp3[24]);
+MUX2_1 mmmm25(temp2[25],1'b0,dataB[3],temp3[25]);
+MUX2_1 mmmm26(temp2[26],1'b0,dataB[3],temp3[26]);
+MUX2_1 mmmm27(temp2[27],1'b0,dataB[3],temp3[27]);
+MUX2_1 mmmm28(temp2[28],1'b0,dataB[3],temp3[28]);
+MUX2_1 mmmm29(temp2[29],1'b0,dataB[3],temp3[29]);
+MUX2_1 mmmm30(temp2[30],1'b0,dataB[3],temp3[30]);
+MUX2_1 mmmm31(temp2[31],1'b0,dataB[3],temp3[31]);
 MUX2_1 mmmm24(temp2[24],1'b0,dataB[3],temp3[24]);
 MUX2_1 mmmm25(temp2[25],1'b0,dataB[3],temp3[25]);
 MUX2_1 mmmm26(temp2[26],1'b0,dataB[3],temp3[26]);

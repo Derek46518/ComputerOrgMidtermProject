@@ -1,12 +1,12 @@
 `timescale 1ns/1ns
-module ALUControl( clk, Signal, SignaltoALU, SignaltoSHT, SignaltoDIV, SignaltoMUX, mulRes );
+module ALUControl( clk, Signal, SignaltoALU, SignaltoSHT, SignaltoDIV, SignaltoMUX);
 input clk ;
 input [5:0] Signal ;
 output [5:0] SignaltoALU ;
 output [5:0] SignaltoSHT ;
 output [5:0] SignaltoDIV ;
 output [5:0] SignaltoMUX ;
-output mulRes;
+
 //   Signal ( 6-bits)?
 //   AND  : 36
 //   OR   : 37
@@ -37,8 +37,8 @@ always@( Signal )
 begin
   if ( Signal == MULTU )
   begin
-    counter = 0 ;
-    res <= 1;
+    counter <= 0 ;
+    
   end
 
 end
@@ -49,13 +49,13 @@ begin
   if ( Signal == MULTU )
   begin
     
-    if (counter==1) res <=0;
-    counter = counter + 1 ;
+   
+    counter <= counter + 1 ;
     
     if ( counter == 32 )
     begin
-      temp = 6'b111111 ; // Open HiLo reg for Div
-      counter = 0 ;
+      temp <= 6'b111111 ; // Open HiLo reg for Div
+      counter <= 0 ;
       
     end
   end
