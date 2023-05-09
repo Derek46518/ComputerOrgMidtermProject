@@ -1,8 +1,8 @@
 `timescale 1ns/1ns
-module Multiplier( clk, dataA, dataB, Signal, dataOut, reset, mulRes);
+module Multiplier( clk, dataA, dataB, Signal, dataOut, reset);
 input clk, reset;
 input [31:0] dataA, dataB;
-input mulRes;
+
 input [5:0] Signal;
 output[63:0] dataOut;
 reg[63:0] Product,temp;
