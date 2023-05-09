@@ -13,11 +13,11 @@ always@( posedge clk or reset )
 begin
   if ( reset )
   begin
-    HiLo = 64'b0 ;
+    HiLo <= 64'b0 ;
   end
 
   begin
-    HiLo = DivAns ;
+    HiLo <= DivAns ;
   end
 
 end
