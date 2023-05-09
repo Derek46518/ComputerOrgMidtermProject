@@ -43,7 +43,7 @@ MUX2_1 m28(dataA[28],dataA[29],dataB[0],temp0[28]);
 MUX2_1 m29(dataA[29],dataA[30],dataB[0],temp0[29]);
 MUX2_1 m30(dataA[30],dataA[31],dataB[0],temp0[30]);
 MUX2_1 m31(dataA[31],1'b0,dataB[0],temp0[31]);
-MUX2_1 m31(dataA[31],1'b0,dataB[0],temp0[31]);
+
 
 
 MUX2_1 mm0(temp0[0],temp0[2],dataB[1],temp1[0]);
@@ -78,8 +78,7 @@ MUX2_1 mm28(temp0[28],temp0[30],dataB[1],temp1[28]);
 MUX2_1 mm29(temp0[29],temp0[31],dataB[1],temp1[29]);
 MUX2_1 mm30(temp0[30],1'b0,dataB[1],temp1[30]);
 MUX2_1 mm31(temp0[31],1'b0,dataB[1],temp1[31]);
-MUX2_1 mm30(temp0[30],1'b0,dataB[1],temp1[30]);
-MUX2_1 mm31(temp0[31],1'b0,dataB[1],temp1[31]);
+
 
 MUX2_1 mmm0(temp1[0],temp1[4],dataB[2],temp2[0]);
 MUX2_1 mmm1(temp1[1],temp1[5],dataB[2],temp2[1]);
