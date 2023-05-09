@@ -112,10 +112,7 @@ MUX2_1 mmm28(temp1[28],1'b0,dataB[2],temp2[28]);
 MUX2_1 mmm29(temp1[29],1'b0,dataB[2],temp2[29]);
 MUX2_1 mmm30(temp1[30],1'b0,dataB[2],temp2[30]);
 MUX2_1 mmm31(temp1[31],1'b0,dataB[2],temp2[31]);
-MUX2_1 mmm28(temp1[28],1'b0,dataB[2],temp2[28]);
-MUX2_1 mmm29(temp1[29],1'b0,dataB[2],temp2[29]);
-MUX2_1 mmm30(temp1[30],1'b0,dataB[2],temp2[30]);
-MUX2_1 mmm31(temp1[31],1'b0,dataB[2],temp2[31]);
+
 
 MUX2_1 mmmm0(temp2[0],temp2[8],dataB[3],temp3[0]);
 MUX2_1 mmmm1(temp2[1],temp2[9],dataB[3],temp3[1]);
@@ -149,14 +146,7 @@ MUX2_1 mmmm28(temp2[28],1'b0,dataB[3],temp3[28]);
 MUX2_1 mmmm29(temp2[29],1'b0,dataB[3],temp3[29]);
 MUX2_1 mmmm30(temp2[30],1'b0,dataB[3],temp3[30]);
 MUX2_1 mmmm31(temp2[31],1'b0,dataB[3],temp3[31]);
-MUX2_1 mmmm24(temp2[24],1'b0,dataB[3],temp3[24]);
-MUX2_1 mmmm25(temp2[25],1'b0,dataB[3],temp3[25]);
-MUX2_1 mmmm26(temp2[26],1'b0,dataB[3],temp3[26]);
-MUX2_1 mmmm27(temp2[27],1'b0,dataB[3],temp3[27]);
-MUX2_1 mmmm28(temp2[28],1'b0,dataB[3],temp3[28]);
-MUX2_1 mmmm29(temp2[29],1'b0,dataB[3],temp3[29]);
-MUX2_1 mmmm30(temp2[30],1'b0,dataB[3],temp3[30]);
-MUX2_1 mmmm31(temp2[31],1'b0,dataB[3],temp3[31]);
+
 
 MUX2_1 mmmmm0(temp3[0],temp3[16],dataB[4],temp4[0]);
 MUX2_1 mmmmm1(temp3[1],temp3[17],dataB[4],temp4[1]);
