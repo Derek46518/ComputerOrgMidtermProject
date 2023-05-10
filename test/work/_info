@@ -1,0 +1,265 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Workspace\ComputerOrgMidtermProject\test
+vALU
+Z1 I6]JWWBgTSW;b4W6jJYJz[2
+Z2 VCzaabM8N=RUY_S0<X_B]k3
+Z3 dC:\Workspace\ComputerOrgMidtermProject\ComputerOrgMidtermProject\test
+Z4 w1682846617
+Z5 8C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/ALU.v
+Z6 FC:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/ALU.v
+L0 2
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@a@l@u
+Z10 !s100 :h8?o;FXD_K@QM_T05JD_3
+Z11 !s108 1683641697.776000
+Z12 !s107 C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/ALU.v|
+Z13 !s90 -reportprogress|300|-work|work|C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/ALU.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vALUbit
+Z14 I6UacZW:Pe[?V?;jQET^Fn3
+Z15 V?:gFOQfTcZk^fcDIR<zzT3
+R3
+Z16 w1682437982
+Z17 8C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/ALUbit.v
+Z18 FC:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/ALUbit.v
+L0 2
+R7
+r1
+31
+R8
+Z19 n@a@l@ubit
+Z20 !s100 Bo_Wlj80FaHXLzeGmAJQH0
+Z21 !s108 1683641697.849000
+Z22 !s107 C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/ALUbit.v|
+Z23 !s90 -reportprogress|300|-work|work|C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/ALUbit.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vALUControl
+Z24 I7Mazo1?abC[d>MUX^c>_d0
+Z25 VDGF`3SBz>;09_]Tj4b5ge3
+R3
+Z26 w1683565180
+Z27 8C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/ALUControl.v
+Z28 FC:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/ALUControl.v
+L0 2
+R7
+r1
+31
+R8
+Z29 n@a@l@u@control
+Z30 !s100 P_imYW0lI@:2@VYE@_KJ12
+Z31 !s108 1683641697.924000
+Z32 !s107 C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/ALUControl.v|
+Z33 !s90 -reportprogress|300|-work|work|C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/ALUControl.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vDivider
+Z34 !s100 a3^fEiJM:a=R=ZfCEmWBL0
+Z35 I3:BZQ?zS2e?GfLU3VPCnC0
+Z36 VX=8Ml78WTMmzzggSohMLG0
+R3
+Z37 w1321004884
+Z38 8C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/Divider.v
+Z39 FC:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/Divider.v
+L0 2
+R7
+r1
+31
+Z40 !s90 -reportprogress|300|-work|work|C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/Divider.v|
+R8
+Z41 n@divider
+Z42 !s108 1682620965.767000
+Z43 !s107 C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/Divider.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vHiLo
+Z44 IOS>KVi65h99lWi4NEbiJW3
+Z45 VZJC]P8[ZOXEbfhie@>RHM3
+R3
+Z46 w1682516303
+Z47 8C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/HiLo.v
+Z48 FC:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/HiLo.v
+L0 2
+R7
+r1
+31
+R8
+Z49 n@hi@lo
+Z50 !s100 Sb=SG`z=7B12U0[CQXJa[1
+Z51 !s108 1683641698.002000
+Z52 !s107 C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/HiLo.v|
+Z53 !s90 -reportprogress|300|-work|work|C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/HiLo.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMultiplier
+Z54 IROmObgCL2I5BEKl0ZDK`R2
+Z55 VoJh;4`P^m2Pco7c5=dloT3
+R3
+Z56 w1683641223
+Z57 8C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/Multiplier.v
+Z58 FC:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/Multiplier.v
+L0 2
+R7
+r1
+31
+R8
+Z59 n@multiplier
+Z60 !s100 WQPkUoZi=KI5XcRZN3Q<k3
+Z61 !s108 1683641698.075000
+Z62 !s107 C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/Multiplier.v|
+Z63 !s90 -reportprogress|300|-work|work|C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/Multiplier.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMUX
+Z64 I2<N[8016i2m6_Ub1eR9Jm2
+Z65 VHH7cLSGjEeaW8i_o4Z:VA3
+R3
+R26
+Z66 8C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/MUX.v
+Z67 FC:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/MUX.v
+L0 2
+R7
+r1
+31
+R8
+Z68 n@m@u@x
+Z69 !s100 okLY4DOnJS=hZ__ZR[26G1
+Z70 !s108 1683641698.145000
+Z71 !s107 C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/MUX.v|
+Z72 !s90 -reportprogress|300|-work|work|C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/MUX.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMUX2_1
+Z73 IYd0BKKBlXUVOzLD_Y2eA41
+Z74 V`2G`go3<o>]D0e1D55:Rb1
+R3
+Z75 w1682608862
+Z76 8C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/MUX2_1.v
+Z77 FC:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/MUX2_1.v
+L0 2
+R7
+r1
+31
+R8
+Z78 n@m@u@x2_1
+Z79 !s100 UTUzVB?ZYU1OJWVPRdLZJ2
+Z80 !s108 1683641698.212000
+Z81 !s107 C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/MUX2_1.v|
+Z82 !s90 -reportprogress|300|-work|work|C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/MUX2_1.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMUX4to1
+Z83 I=;aCI;0=6W<^;IeXgDUj<1
+Z84 V>miM>aQ1?aWY8>K3=4zDG3
+R3
+Z85 w1682517094
+Z86 8C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/MUX4-1.v
+Z87 FC:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/MUX4-1.v
+L0 2
+R7
+r1
+31
+R8
+Z88 n@m@u@x4to1
+Z89 !s100 60K[hH<`DefDAOK[Iz3oB1
+Z90 !s108 1683641698.279000
+Z91 !s107 C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/MUX4-1.v|
+Z92 !s90 -reportprogress|300|-work|work|C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/MUX4-1.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vONEBIT_FA
+Z93 I[A59i4PP?bI[lZ:hf0jjO2
+Z94 VUjXAo5lTc:lFH^`O]lWo80
+R3
+R46
+Z95 8C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/ONEBIT_FA.v
+Z96 FC:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/ONEBIT_FA.v
+L0 2
+R7
+r1
+31
+R8
+Z97 n@o@n@e@b@i@t_@f@a
+Z98 !s100 o2SGZ^K=?Dgm03?@N:<Hi0
+Z99 !s108 1683641698.349000
+Z100 !s107 C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/ONEBIT_FA.v|
+Z101 !s90 -reportprogress|300|-work|work|C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/ONEBIT_FA.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vShifter
+Z102 IFi?Y8CX8F9LhK=;T?l34l1
+Z103 V[ik3778AXTTM`oYV?NK]H3
+R3
+R56
+Z104 8C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/Shifter.v
+Z105 FC:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/Shifter.v
+L0 2
+R7
+r1
+31
+R8
+Z106 n@shifter
+Z107 !s100 T:HFjMje[28>GjO:WaEh:3
+Z108 !s108 1683641698.415000
+Z109 !s107 C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/Shifter.v|
+Z110 !s90 -reportprogress|300|-work|work|C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/Shifter.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vtb_ALU
+Z111 IJ?:hUV`NzV0930c;Glb;f0
+Z112 VJ;TnOjHFn3KbASFPGPEl41
+R3
+R26
+Z113 8C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/tb_ALU.v
+Z114 FC:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/tb_ALU.v
+L0 2
+R7
+r1
+31
+R8
+Z115 ntb_@a@l@u
+!i10b 1
+Z116 !s100 @]ZkAB5:RjDnAdMkSggY>3
+!s85 0
+Z117 !s108 1683641698.480000
+Z118 !s107 C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/tb_ALU.v|
+Z119 !s90 -reportprogress|300|-work|work|C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/tb_ALU.v|
+!s101 -O0
+vTotalALU
+!i10b 1
+!s100 lHQhQ@GGK5[2cX]94W>7;1
+ImjiB^7IP0c1E4905@K?0B1
+Z120 V28mOQ[>GPzAm3>eJ>MPgn0
+R3
+R26
+8C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/TotalALU.v
+FC:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/TotalALU.v
+L0 2
+R7
+r1
+!s85 0
+31
+!s108 1683641698.542000
+!s107 C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/TotalALU.v|
+!s90 -reportprogress|300|-work|work|C:/Workspace/ComputerOrgMidtermProject/ComputerOrgMidtermProject/TotalALU.v|
+!s101 -O0
+R8
+Z121 n@total@a@l@u
