@@ -44,7 +44,7 @@ wire [63:0] MulAns ;
 
 ALUControl ALUControl( .clk(clk), .Signal(Signal), .SignaltoALU(SignaltoALU), .SignaltoSHT(SignaltoSHT), .SignaltoDIV(SignaltoMUL), .SignaltoMUX(SignaltoMUX) );
 ALU ALU( .dataA(dataA), .dataB(dataB), .Signal(SignaltoALU), .dataOut(ALUOut), .reset(reset) );
-Multiplier Multiplier( .clk(clk), .dataA(dataA), .dataB(dataB), .Signal(SignaltoMUL), .dataOut(MulAns), .reset(reset) );
+Multiplier Multiplier( .clk(clk), .dataA(dataA), .dataB(dataB), .Signal(SignaltoMUL), .dataOut(MulAns), .reset(mulRes) );
 Shifter Shifter( .dataA(dataA), .dataB(dataB), .Signal(SignaltoSHT), .dataOut(ShifterOut), .reset(reset) );
 HiLo HiLo( .clk(clk), .DivAns(MulAns), .HiOut(HiOut), .LoOut(LoOut), .reset(reset) );
 MUX MUX( .ALUOut(ALUOut), .HiOut(HiOut), .LoOut(LoOut), .Shifter(ShifterOut), .Signal(SignaltoMUX), .dataOut(dataOut) );
